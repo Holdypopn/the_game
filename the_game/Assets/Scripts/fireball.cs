@@ -31,8 +31,7 @@ public class fireball : MonoBehaviour
         {
             enemyComponent.TakeDamage(damage);
             anim.SetTrigger("onDeath");
-            
-            Destroy(gameObject, 0.3f);
+            Destroy(gameObject, 0.5f);
         }
     }
 }
