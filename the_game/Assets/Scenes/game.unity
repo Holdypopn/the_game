@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLeftText: {fileID: 1678580776}
+  enemyToSpawn: {fileID: 3474813958733835340, guid: 51d67a59714d79543ae390a2fde63d86, type: 3}
 --- !u!4 &467371517
 Transform:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467371515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -380.90054, y: 442.07883, z: -5.8865223}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
