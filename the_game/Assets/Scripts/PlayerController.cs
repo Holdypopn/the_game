@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
 
     private State state;
     Vector2 moveDirection;
-    Vector2 mousePosition;
     private float dashSpeed;
     private Vector2 dashDirection;
 
@@ -46,7 +45,6 @@ public class PlayerController : MonoBehaviour
                 }
 
                 moveDirection = new Vector2(moveX, moveY).normalized;
-                mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 
                 //Dash
@@ -77,10 +75,6 @@ public class PlayerController : MonoBehaviour
         {
             case State.Normal:
                 rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-
-                Vector2 aimDirection = mousePosition - rb.position;
-                float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-                rb.rotation = aimAngle;
                 break;
             case State.Dashing:
                 rb.velocity = dashDirection * dashSpeed;
