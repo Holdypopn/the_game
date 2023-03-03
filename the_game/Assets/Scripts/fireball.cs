@@ -24,10 +24,10 @@ public class fireball : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
         
-        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        if(col.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
             enemyComponent.TakeDamage(damage);
             anim.SetTrigger("onDeath");
