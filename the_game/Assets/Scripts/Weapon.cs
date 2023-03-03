@@ -32,9 +32,5 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         rotation = firePoint.rotation * Quaternion.Euler(0, 0, 90);
-
-        //transform.RotateAround(this.transform.parent.position, this.transform.parent., Time.deltaTime * 90f);
-
-        transform.parent.Rotate(0, 0, 10 * Time.deltaTime);
     }
 }
