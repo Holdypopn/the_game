@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject projectilePrefab;
+    public GameObject fireballPrefab;
+    public GameObject blueFireballPrefab;
     public Transform firePoint;
     public float fireForce = 10f;
 
-    public void Fire()
+    public void ShootFireball()
     {
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        GameObject projectile = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+        projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+    }
+
+    public void ShootBlueFireball()
+    {
+        GameObject projectile = Instantiate(blueFireballPrefab, firePoint.position, firePoint.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 

@@ -845,7 +845,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7755459287069488380, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: fireballPrefab
+      value: 
+      objectReference: {fileID: 305901874130854743, guid: 78d671d882916b648bc3379978fa8568, type: 3}
+    - target: {fileID: 7755459287069488380, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 305901874130854743, guid: 97898c0d5b826d9489b88466a2b07b4c, type: 3}
+    - target: {fileID: 7755459287069488380, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: blueFireballPrefab
       value: 
       objectReference: {fileID: 305901874130854743, guid: 97898c0d5b826d9489b88466a2b07b4c, type: 3}
     - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
