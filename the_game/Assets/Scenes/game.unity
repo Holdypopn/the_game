@@ -661,6 +661,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1486296033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7755459287331766717, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+  m_PrefabInstance: {fileID: 7755459288201980617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486296039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486296033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a323a41bd942d184399e5309f544d5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circlePrefab: {fileID: 3412370355935943124, guid: f11670676696ace4dbde65c9b7c38490, type: 3}
+  growFactor: 10
+  maxSize: 10
+  waitTime: 5
 --- !u!1001 &1663568539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,7 +748,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6126794526528809647, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7755459287069488380, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: fireballPrefab
@@ -829,6 +850,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2038167306, guid: c7c1b9eec1d40484eab1c1bcf37d5782, type: 3}
+    - target: {fileID: 7755459287331766716, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: abilities
+      value: 
+      objectReference: {fileID: 1486296039}
     - target: {fileID: 7755459287331766716, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: moveSpeed
       value: 6
