@@ -23,9 +23,9 @@ public class Bullet : MonoBehaviour
          Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        if(col.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
             enemyComponent.TakeDamage(damage);
         }
