@@ -8,16 +8,17 @@ public class Weapon : MonoBehaviour
     public GameObject blueFireballPrefab;
     public Transform firePoint;
     public float fireForce = 10f;
+    private Quaternion rotation;
 
     public void ShootFireball()
     {
-        GameObject projectile = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+        GameObject projectile = Instantiate(fireballPrefab, firePoint.position, rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 
     public void ShootBlueFireball()
     {
-        GameObject projectile = Instantiate(blueFireballPrefab, firePoint.position, firePoint.rotation);
+        GameObject projectile = Instantiate(blueFireballPrefab, firePoint.position, rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 
@@ -30,6 +31,6 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        rotation = firePoint.rotation * Quaternion.Euler(0, 0, 90);
     }
 }

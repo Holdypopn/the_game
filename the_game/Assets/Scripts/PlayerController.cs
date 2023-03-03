@@ -23,6 +23,14 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        
+
+        moveDirection = new Vector2(moveX, moveY).normalized;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    void LateUpdate()
+    {
         if(Input.GetMouseButtonDown(0))
         {
             weapon.ShootFireball();
@@ -31,9 +39,6 @@ public class PlayerController : MonoBehaviour
         {
             weapon.ShootBlueFireball();
         }
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
