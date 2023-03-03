@@ -25,7 +25,11 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            weapon.Fire();
+            weapon.ShootFireball();
+        }
+        if(Input.GetMouseButtonDown(1))
+        {
+            weapon.ShootBlueFireball();
         }
 
         moveDirection = new Vector2(moveX, moveY).normalized;
