@@ -291,7 +291,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -878,9 +878,25 @@ PrefabInstance:
       propertyPath: blueFireballPrefab
       value: 
       objectReference: {fileID: 305901874130854743, guid: 97898c0d5b826d9489b88466a2b07b4c, type: 3}
+    - target: {fileID: 7755459287069488382, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f1e2fbcb0bf82dc45bae1cfcfea083aa, type: 3}
     - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 7755459287224132416, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -950,6 +966,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2038167306, guid: c7c1b9eec1d40484eab1c1bcf37d5782, type: 3}
+    - target: {fileID: 7755459287331766716, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766717, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_Name
       value: Player

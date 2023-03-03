@@ -10,12 +10,14 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 10;
 
     private GameObject target;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         target = GameObject.FindWithTag("Player");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,9 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.3f);
+            anim.SetTrigger("onDeath");
+            moveSpeed = 0;
             OnEnemyKilled?.Invoke(this);
         }
     }
