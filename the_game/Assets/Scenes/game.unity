@@ -838,6 +838,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678580774}
   m_CullTransparentMesh: 1
+--- !u!1 &2042272252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7755459287331766717, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+  m_PrefabInstance: {fileID: 7755459288201980617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2042272258
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042272252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73c84b6d0fe57bc409d32a756e6bfa2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &7755459288201980617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -857,9 +882,25 @@ PrefabInstance:
       propertyPath: blueFireballPrefab
       value: 
       objectReference: {fileID: 305901874130854743, guid: 97898c0d5b826d9489b88466a2b07b4c, type: 3}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -901,6 +942,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7755459287331766705, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2038167306, guid: c7c1b9eec1d40484eab1c1bcf37d5782, type: 3}
     - target: {fileID: 7755459287331766717, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_Name
       value: Player
