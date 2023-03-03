@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float fireForce = 20f;
+    public float fireForce = 10f;
 
     public void Fire()
     {
@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
