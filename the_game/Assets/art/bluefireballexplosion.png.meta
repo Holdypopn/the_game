@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 65bf516216b512042a5ad2896fedeeb6
+guid: 1c0501013e7d5bf4c97b1e8772c9f611
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bluefireball_0
+      name: bluefireballexplosion_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +127,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 7de139e7e1ec74f45a424fc2757eb5e9
-      internalID: -197743213
+      spriteID: d9bd4fd4aca4e384480103ed499791aa
+      internalID: 1419407331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_1
+      name: bluefireballexplosion_1
       rect:
         serializedVersion: 2
         x: 32
@@ -156,14 +156,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 00144217b563ffb4aa3d52ccdf773371
-      internalID: 1086413900
+      spriteID: a14030720d1059b489ee56f5c719102d
+      internalID: -1173852570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_2
+      name: bluefireballexplosion_2
       rect:
         serializedVersion: 2
         x: 64
@@ -185,14 +185,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 5fac2adb088cbaf4384e2de0d238e9b7
-      internalID: 1942919563
+      spriteID: c91d3a438d8f6224fa4578be4e33d2f2
+      internalID: 1946931435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_3
+      name: bluefireballexplosion_3
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +214,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: f52ecf69ffc3d444e875ff300e7ac71b
-      internalID: -1655899542
+      spriteID: a40b7324695aa9849b2da7754a647e54
+      internalID: -46084611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_4
+      name: bluefireballexplosion_4
       rect:
         serializedVersion: 2
         x: 128
@@ -243,14 +243,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: d094d218eb942e74aa8b9c93db13a8c7
-      internalID: 1207354288
+      spriteID: f3cca6a7c61c0fc4ebd3db4447dc24b1
+      internalID: 2056039549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_5
+      name: bluefireballexplosion_5
       rect:
         serializedVersion: 2
         x: 160
@@ -272,14 +272,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: ef62f8c5b739f6b47993c0f082d0b21f
-      internalID: 702880318
+      spriteID: d3d929e86a6f8cc438cd7d2d7c981049
+      internalID: -763888201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_6
+      name: bluefireballexplosion_6
       rect:
         serializedVersion: 2
         x: 192
@@ -301,14 +301,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: ad208eb7b2528ca4d9b6970c79908d03
-      internalID: -2142623985
+      spriteID: a2a988e9fc8ab2947a9966b0a41e0551
+      internalID: 346338076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_7
+      name: bluefireballexplosion_7
       rect:
         serializedVersion: 2
         x: 224
@@ -330,14 +330,14 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 3399436906f4ca049b2ac0c554617c91
-      internalID: 2108565711
+      spriteID: e25d22834e1171d42b45d3204cca7916
+      internalID: -368870756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bluefireball_8
+      name: bluefireballexplosion_8
       rect:
         serializedVersion: 2
         x: 256
@@ -359,8 +359,37 @@ TextureImporter:
         - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: cdd27e69947d80d49a1efbbf4ef92859
-      internalID: 1339253644
+      spriteID: 80c5f70646e828945946f4269e85a895
+      internalID: 1245866268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluefireballexplosion_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07354a93fe52204b9976e1db4cf703a
+      internalID: -218040416
       vertices: []
       indices: 
       edges: []
@@ -376,15 +405,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bluefireball_0: -197743213
-      bluefireball_1: 1086413900
-      bluefireball_2: 1942919563
-      bluefireball_3: -1655899542
-      bluefireball_4: 1207354288
-      bluefireball_5: 702880318
-      bluefireball_6: -2142623985
-      bluefireball_7: 2108565711
-      bluefireball_8: 1339253644
+      bluefireballexplosion_0: 1419407331
+      bluefireballexplosion_1: -1173852570
+      bluefireballexplosion_2: 1946931435
+      bluefireballexplosion_3: -46084611
+      bluefireballexplosion_4: 2056039549
+      bluefireballexplosion_5: -763888201
+      bluefireballexplosion_6: 346338076
+      bluefireballexplosion_7: -368870756
+      bluefireballexplosion_8: 1245866268
+      bluefireballexplosion_9: -218040416
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
