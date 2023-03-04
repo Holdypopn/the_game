@@ -8,4 +8,9 @@ public class Player : MonoBehaviour
     public float maxHealth;
     public float currentShield;
     public float maxShield;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
 }
