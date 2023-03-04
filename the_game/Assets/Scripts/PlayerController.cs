@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
     public Weapon weapon;
+    public Abilities abilities;
 
     private enum State
     {
@@ -42,6 +43,11 @@ public class PlayerController : MonoBehaviour
                 if(Input.GetMouseButtonDown(1))
                 {
                     weapon.ShootBlueFireball();
+                }
+
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    StartCoroutine(abilities.ActivateCircle());
                 }
 
                 moveDirection = new Vector2(moveX, moveY).normalized;
