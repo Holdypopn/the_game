@@ -35,6 +35,19 @@ public class Enemy : MonoBehaviour
         {
             GameObject.FindWithTag("Player").GetComponent<Player>().currentHealth -= damage;
             anim.SetTrigger("attack");
+            Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
+            if(player.currentShield <= 0)
+                player.currentHealth -= damage;
+            else
+            {
+                player.currentShield -= damage;
+                if(player.currentShield <= 0)
+                {
+                    player.currentHealth -= player.currentShield;
+                    player.currentShield = 0;
+                }
+            }
+
             StartCoroutine(AttackCoolDown());
         }
     }
