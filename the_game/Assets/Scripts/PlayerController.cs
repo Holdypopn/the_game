@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         switch(state)
         {
             case State.Normal:
+                GetComponent<Collider2D>().enabled = true;
                 float moveX = Input.GetAxisRaw("Horizontal");
                 float moveY = Input.GetAxisRaw("Vertical");
 
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case State.Dashing:
+                GetComponent<Collider2D>().enabled = false;
                 float dashSpeedDropMultiplier = 5f;
                 dashSpeed -= dashSpeed * dashSpeedDropMultiplier * Time.deltaTime;
 
