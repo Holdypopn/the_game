@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    const float dropCHance = 1f / 10f;
     public static event Action<Enemy> OnEnemyKilled;
     public float health, maxHealth = 3f;
     public float moveSpeed = 10;
     public float damage = 1;
     public float enemyCoolDown = 2;
+    public GameObject drop;
 
     private GameObject target;
     private Animator anim;
@@ -65,6 +67,8 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("onDeath");
             moveSpeed = 0;
             OnEnemyKilled?.Invoke(this);
+            if(UnityEngine.Random.Range(0f, 1f) <= dropCHance)
+                Instantiate(drop, transform.position, Quaternion.identity);
         }
     }
 }
