@@ -29,7 +29,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+        if(!playerInRange)
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
 
         if(playerInRange && canAttack)
         {
@@ -59,13 +61,13 @@ public class Enemy : MonoBehaviour
         canAttack = true;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Player"))
             playerInRange = true;
     }
 
-    void OnTriggerExit2D(Collider2D col)
+    void OnCollisionExit2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Player"))
             playerInRange = false;
