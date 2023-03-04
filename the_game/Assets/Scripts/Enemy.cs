@@ -33,8 +33,8 @@ public class Enemy : MonoBehaviour
 
         if(playerInRange && canAttack)
         {
-            GameObject.FindWithTag("Player").GetComponent<Player>().currentHealth -= damage;
             anim.SetTrigger("attack");
+
             Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
             if(player.currentShield <= 0)
                 player.currentHealth -= damage;
