@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveDirection;
     private float dashSpeed;
     private Vector2 dashDirection;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -57,18 +58,19 @@ public class PlayerController : MonoBehaviour
                 //Dash
                 if(Input.GetKeyDown(KeyCode.LeftShift))
                 {
+                    anim.SetTrigger("onDash");
                     dashDirection = moveDirection;
-                    dashSpeed = 80f;
+                    dashSpeed = 50f;
                     state = State.Dashing;
                 }
                 break;
 
             case State.Dashing:
                 GetComponent<Collider2D>().enabled = false;
-                float dashSpeedDropMultiplier = 5f;
+                float dashSpeedDropMultiplier = 4f;
                 dashSpeed -= dashSpeed * dashSpeedDropMultiplier * Time.deltaTime;
 
-                float dashSpeedMinimum = 50f;
+                float dashSpeedMinimum = 20f;
                 if(dashSpeed < dashSpeedMinimum)
                 {
                     state = State.Normal;
