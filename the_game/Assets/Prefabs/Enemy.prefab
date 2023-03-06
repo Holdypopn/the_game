@@ -153,6 +153,7 @@ MonoBehaviour:
   damage: 1
   enemyCoolDown: 2
   drop: {fileID: 1243160934098347371, guid: 4c394c876176b3749a84c57fefc360c5, type: 3}
+  floatingTextPrefab: {fileID: 6771633852310011018, guid: f8387407147e9ad47b50249dfe8f6184, type: 3}
 --- !u!95 &8961897250327683810
 Animator:
   serializedVersion: 5

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public float damage = 1;
     public float enemyCoolDown = 2;
     public GameObject drop;
+    public GameObject floatingTextPrefab;
 
     private GameObject target;
     private Animator anim;
@@ -75,6 +76,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
+        ShowDamage(damageAmount.ToString());
         health -= damageAmount;
 
         if(health <= 0)
@@ -85,6 +87,15 @@ public class Enemy : MonoBehaviour
             OnEnemyKilled?.Invoke(this);
             if(UnityEngine.Random.Range(0f, 1f) <= dropCHance)
                 Instantiate(drop, transform.position, Quaternion.identity);
+        }
+    }
+
+    void ShowDamage(string text)
+    {
+        if(floatingTextPrefab)
+        {
+            GameObject prefab = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
+            prefab.GetComponentInChildren<TextMesh>().text = text;
         }
     }
 }
