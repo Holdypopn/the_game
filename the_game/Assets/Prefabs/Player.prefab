@@ -306,6 +306,7 @@ MonoBehaviour:
   rb: {fileID: 7755459287331766719}
   weapon: {fileID: 7755459287069488380}
   abilities: {fileID: 1486296039}
+  anim: {fileID: 0}
 --- !u!95 &1486296052
 Animator:
   serializedVersion: 5
@@ -339,8 +340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circlePrefab: {fileID: 3412370355935943124, guid: f11670676696ace4dbde65c9b7c38490, type: 3}
-  growFactor: 10
-  maxSize: 10
+  growFactor: 20
+  maxSize: 20
   waitTime: 5
 --- !u!114 &1486296046
 MonoBehaviour:
