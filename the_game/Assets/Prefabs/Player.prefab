@@ -5006,6 +5006,7 @@ GameObject:
   - component: {fileID: 1486296039}
   - component: {fileID: 1486296046}
   - component: {fileID: 2304718158981906959}
+  - component: {fileID: -9052824394909273606}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5207,3 +5208,15 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &-9052824394909273606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755459287331766717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d901f6f1fb041dd45bbb748e0bf96510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

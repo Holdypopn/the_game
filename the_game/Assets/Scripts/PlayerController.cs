@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
-    public Weapon weapon;
+    public Weapon1 weapon;
     public Abilities abilities;
     public ParticleSystem dust;
 
