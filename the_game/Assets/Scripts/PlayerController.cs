@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Weapon weapon;
     public Abilities abilities;
+    public ParticleSystem dust;
 
     private enum State
     {
@@ -100,9 +101,15 @@ public class PlayerController : MonoBehaviour
 
     void Flip()
     {
+        CreateDust();
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 }
