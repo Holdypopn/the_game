@@ -10,15 +10,15 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Enemy.OnEnemyKilled += SpawnNewEnemy;
+        //Enemy.OnEnemyKilled += SpawnNewEnemy;
     }
 
     private void OnDisable()
     {
-        Enemy.OnEnemyKilled -= SpawnNewEnemy;
+        //Enemy.OnEnemyKilled -= SpawnNewEnemy;
     }
 
-    void SpawnNewEnemy(Enemy enemy)
+    public void SpawnNewEnemy(Enemy enemy)
     {
         Vector2 randomPositionOnScreen = Camera.main.ViewportToWorldPoint(new Vector2(Random.value, Random.value));
         Instantiate(enemyToSpawn, randomPositionOnScreen, Quaternion.identity);
