@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private float dashSpeed;
     private Vector2 dashDirection;
     public Animator anim;
+    private bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +35,17 @@ public class PlayerController : MonoBehaviour
         {
             case State.Normal:
                 GetComponent<Collider2D>().enabled = true;
+
                 float moveX = Input.GetAxisRaw("Horizontal");
                 float moveY = Input.GetAxisRaw("Vertical");
+                moveDirection = new Vector2(moveX, moveY).normalized;
 
-                
+                if(moveX > 0 && !facingRight)
+                    Flip();
+                else if(moveX < 0 && facingRight)
+                    Flip();
+
+
                 if(Input.GetMouseButtonDown(0))
                 {
                     weapon.ShootFireball();
@@ -52,9 +60,7 @@ public class PlayerController : MonoBehaviour
                     StartCoroutine(abilities.ActivateCircle());
                 }
 
-                moveDirection = new Vector2(moveX, moveY).normalized;
-
-
+                
                 //Dash
                 if(Input.GetKeyDown(KeyCode.LeftShift))
                 {
@@ -90,5 +96,13 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = dashDirection * dashSpeed;
                 break;
         }
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        facingRight = !facingRight;
     }
 }
