@@ -20,7 +20,6 @@ public class CombatController : MonoBehaviour
     {
         weaponPrefabs = LoadAllProjectilePrefabs();
         weaponConfigs = LoadAllWeaponConfigs();
-        currentWeaponConfig = new WeaponConfig();
 
         //Set default weapon
         currentWeaponConfig = weaponConfigs.Find(item => item.name == "Wand Of Fire").GetComponent<WeaponConfig>();
