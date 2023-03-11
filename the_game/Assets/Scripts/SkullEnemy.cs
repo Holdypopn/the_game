@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class SkullEnemy : Enemy
 {
-    public float attackCoolDown = 2;
-    
-    public float moveSpeed = 5f;
+    private GameObject target;
+    private Animator anim;
+    private bool playerInRange = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.FindWithTag("Player");
+        //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
