@@ -17,9 +17,10 @@ public class CombatController : MonoBehaviour
     void Start()
     {
         weaponPrefabs = LoadAllWeaponPrefabs();
+        currentWeaponConfig = new WeaponConfig();
 
         //Testing
-        currentWeaponConfig.weaponName = null;
+        currentWeaponConfig.weaponName = "Wand of Fire";
         currentWeaponConfig.attackTimerPrimary = 0.1f;
         currentWeaponConfig.coolDownTimerPrimary = 0.5f;
         currentWeaponConfig.projectileSpeedPrimary = 30f;
@@ -39,13 +40,23 @@ public class CombatController : MonoBehaviour
         currentWeaponConfig.attackTimerPrimary += Time.deltaTime;
         currentWeaponConfig.attackTimerSecondary += Time.deltaTime;
         rotation = firePoint.rotation * Quaternion.Euler(0, 0, 90);
+
+        if(pickupNewWeapon)
+        {
+            currentWeaponConfig.projectilePrefabPrimary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNamePrimary);
+            currentWeaponConfig.projectilePrefabSecondary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNameSecondary);
+            pickupNewWeapon = false;
+        }
+        
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Weapon"))
+        if(col.gameObject.CompareTag("Weapon") && Input.GetKeyDown(KeyCode.F))
         {
-
+            currentWeaponConfig = col.GetComponent<WeaponConfig>();
+            pickupNewWeapon = true;
+            Destroy(col.gameObject);
         }
     }
 
@@ -80,24 +91,4 @@ public class CombatController : MonoBehaviour
             projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * currentWeaponConfig.projectileSpeedSecondary, ForceMode2D.Impulse);
         }
     }
-}
-
-
-
-
-public struct WeaponConfig
-{
-    public string weaponName;
-
-    public float attackTimerPrimary;
-    public float coolDownTimerPrimary;
-    public float projectileSpeedPrimary;
-    public string projectilePrefabNamePrimary;
-    public GameObject projectilePrefabPrimary;
-
-    public float attackTimerSecondary;
-    public float coolDownTimerSecondary;
-    public float projectileSpeedSecondary;
-    public string projectilePrefabNameSecondary;
-    public GameObject projectilePrefabSecondary;
 }
