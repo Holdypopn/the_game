@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
-    public Weapon1 weapon;
     public Abilities abilities;
     public ParticleSystem dust;
+    private CombatController cc;
 
     private enum State
     {
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         state = State.Normal;
         anim = GetComponent<Animator>();
+        cc = GetComponent<CombatController>();
     }
 
     // Update is called once per frame
@@ -50,11 +51,11 @@ public class PlayerController : MonoBehaviour
 
                 if(Input.GetMouseButtonDown(0))
                 {
-                    weapon.ShootFireball();
+                    cc.attackPrimary();
                 }
                 if(Input.GetMouseButtonDown(1))
                 {
-                    weapon.ShootBlueFireball();
+                    cc.attackSecondary();
                 }
 
                 if(Input.GetKeyDown(KeyCode.Space))

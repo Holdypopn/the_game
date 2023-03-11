@@ -13312,6 +13312,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1829125478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7755459287224132416, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+  m_PrefabInstance: {fileID: 7755459288201980617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1893451324
 GameObject:
   m_ObjectHideFlags: 0
@@ -15966,6 +15971,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9052824394909273606, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1829125478}
+    - target: {fileID: -9052824394909273606, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: fireballPrefab
+      value: 
+      objectReference: {fileID: 305901874130854743, guid: 142873d6571e040498522a52314abb95, type: 3}
+    - target: {fileID: -9052824394909273606, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: blueFireballPrefab
+      value: 
+      objectReference: {fileID: 305901874130854743, guid: 4f892ef1c7233914a88842ab56c109d7, type: 3}
     - target: {fileID: 1486296052, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_Controller
       value: 
