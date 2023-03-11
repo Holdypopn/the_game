@@ -15966,9 +15966,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1486296052, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d1b9569ba0a075c44b49d7431322a7b3, type: 2}
+    - target: {fileID: 7755459287069488381, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287069488383, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766704, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16010,6 +16034,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7755459287331766705, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1371917101, guid: 95557070527c83d4f9c6dd2f1fc531e7, type: 3}
     - target: {fileID: 7755459287331766717, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
       propertyPath: m_Name
       value: Player

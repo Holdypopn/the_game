@@ -20,13 +20,14 @@ public class PlayerController : MonoBehaviour
     Vector2 moveDirection;
     private float dashSpeed;
     private Vector2 dashDirection;
-    public Animator anim;
+    private Animator anim;
     private bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
         state = State.Normal;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
