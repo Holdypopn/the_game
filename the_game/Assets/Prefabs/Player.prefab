@@ -4867,7 +4867,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7755459287069488383}
   - component: {fileID: 7755459287069488382}
-  - component: {fileID: 7755459287069488380}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -4884,7 +4883,7 @@ Transform:
   m_GameObject: {fileID: 7755459287069488381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.26, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7755459287224132416}
@@ -4943,22 +4942,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7755459287069488380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7755459287069488381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73dc61b4b1573a147b07a13054b70844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireballPrefab: {fileID: 305901874130854743, guid: 78d671d882916b648bc3379978fa8568, type: 3}
-  blueFireballPrefab: {fileID: 305901874130854743, guid: 97898c0d5b826d9489b88466a2b07b4c, type: 3}
-  firePoint: {fileID: 7755459287224132416}
-  fireForce: 30
 --- !u!1 &7755459287224132417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,8 +4988,8 @@ GameObject:
   - component: {fileID: 1486296052}
   - component: {fileID: 1486296039}
   - component: {fileID: 1486296046}
+  - component: {fileID: 4006639519564754944}
   - component: {fileID: 2304718158981906959}
-  - component: {fileID: -9052824394909273606}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5023,7 +5006,7 @@ Transform:
   m_GameObject: {fileID: 7755459287331766717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02414009, y: 0.18779606, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6126794526528809647}
@@ -5072,7 +5055,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1108733289, guid: 133bb372396fdd144b584aa4ea1d96bd, type: 3}
+  m_Sprite: {fileID: 1371917101, guid: 95557070527c83d4f9c6dd2f1fc531e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5118,10 +5101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   rb: {fileID: 7755459287331766719}
-  weapon: {fileID: 7755459287069488380}
   abilities: {fileID: 1486296039}
   dust: {fileID: 1335826969}
-  anim: {fileID: 1486296052}
 --- !u!95 &1486296052
 Animator:
   serializedVersion: 5
@@ -5174,6 +5155,19 @@ MonoBehaviour:
   maxHealth: 50
   currentShield: 10
   maxShield: 10
+--- !u!114 &4006639519564754944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755459287331766717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8d19acd61c14f4882401e6f23e12d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
 --- !u!68 &2304718158981906959
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -5208,15 +5202,3 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &-9052824394909273606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7755459287331766717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d901f6f1fb041dd45bbb748e0bf96510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

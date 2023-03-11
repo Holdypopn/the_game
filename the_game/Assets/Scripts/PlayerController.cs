@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Abilities abilities;
     public ParticleSystem dust;
-    private CombatController cc;
+    private WeaponController wC;
 
     private enum State
     {
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         state = State.Normal;
         anim = GetComponent<Animator>();
-        cc = GetComponent<CombatController>();
+        wC = GetComponent<WeaponController>();
     }
 
     // Update is called once per frame
@@ -57,11 +57,11 @@ public class PlayerController : MonoBehaviour
 
                 if(Input.GetMouseButtonDown(0))
                 {
-                    cc.attackPrimary();
+                    wC.attackPrimary();
                 }
                 if(Input.GetMouseButtonDown(1))
                 {
-                    cc.attackSecondary();
+                    wC.attackSecondary();
                 }
 
                 if(Input.GetKeyDown(KeyCode.Space))

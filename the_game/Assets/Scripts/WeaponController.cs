@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatController : MonoBehaviour
+public class WeaponController : MonoBehaviour
 {
     private List<GameObject> weaponPrefabs = new List<GameObject>();
     private List<GameObject> weaponConfigs = new List<GameObject>();
