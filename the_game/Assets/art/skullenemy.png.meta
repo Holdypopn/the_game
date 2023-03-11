@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 133bb372396fdd144b584aa4ea1d96bd
+guid: 833263d47015a724f903ea8378de8fea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: characteridle_0
+      name: skullenemy_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c2bc0be10dfe8a40ad0fe94090608a0
-      internalID: -1108733289
+      spriteID: 9952f3305be98964b8dbff5c1ea5648a
+      internalID: -526099426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: characteridle_1
+      name: skullenemy_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f890ddebfbc8f43aad16c2b9f1e343
-      internalID: 438661582
+      spriteID: 11ced78f4fc880e45a52519cd91d85fe
+      internalID: -853755795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: characteridle_2
+      name: skullenemy_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8845fc0e179eba64bad82e88179d1b27
-      internalID: -309714073
+      spriteID: 1d93b7cb7e5cbed4fbbdb71c43a247c7
+      internalID: 673169949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: characteridle_3
+      name: skullenemy_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 044fc4366d78e114a93be02673dbd73e
-      internalID: -1300768765
+      spriteID: 85844c35f1bf87e45a63510340191a61
+      internalID: 1194538882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: characteridle_4
+      name: skullenemy_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c003bd1e6328fb4e8a5e28155b00a02
-      internalID: 573624877
+      spriteID: ed22b528bbe0fd8429d49e01df6e2343
+      internalID: -1098254030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: characteridle_5
+      name: skullenemy_5
       rect:
         serializedVersion: 2
         x: 160
@@ -224,92 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d20402e75a989b47ba6dd8eee0205f7
-      internalID: 58775800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: characteridle_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5ad5f5e281e4a54ba1b07dddb40a44f
-      internalID: 593889559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: characteridle_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 755a6ab8c8292504fb091171397775df
-      internalID: -1810730585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: characteridle_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcfdeb0bca9b9bb42b52ee9df7433ee0
-      internalID: 2058430818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: characteridle_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5200ab26f8852b4eae59d1cde0dc5b5
-      internalID: -567833685
+      spriteID: 4730bd953c3172b449fd7144c72f86d0
+      internalID: 565885663
       vertices: []
       indices: 
       edges: []
@@ -325,16 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      characteridle_0: -1108733289
-      characteridle_1: 438661582
-      characteridle_2: -309714073
-      characteridle_3: -1300768765
-      characteridle_4: 573624877
-      characteridle_5: 58775800
-      characteridle_6: 593889559
-      characteridle_7: -1810730585
-      characteridle_8: 2058430818
-      characteridle_9: -567833685
+      skullenemy_0: -526099426
+      skullenemy_1: -853755795
+      skullenemy_2: 673169949
+      skullenemy_3: 1194538882
+      skullenemy_4: -1098254030
+      skullenemy_5: 565885663
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
