@@ -20,7 +20,7 @@ public class circleAbility : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         
-        if(col.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        if(col.gameObject.TryGetComponent<EnemyHealth>(out EnemyHealth enemyComponent))
         {
             enemyComponent.TakeDamage(damage);
         }
