@@ -11,8 +11,8 @@ public class CombatController : MonoBehaviour
     
     private Quaternion rotation;
     private WeaponConfig currentWeaponConfig;
-    public bool pickupNewWeapon = false;
-    public GameObject toBeDeleted;
+    private bool pickupNewWeapon = false;
+    private GameObject toBeDeleted;
 
 
     // Start is called before the first frame update
