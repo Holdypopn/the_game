@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7087223965639926938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f3dd22a07e82d5438f82d685b71cd77, type: 3}
+  m_Script: {fileID: 11500000, guid: dee6aca36e2a61647946bcf05a126d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Wand Of Fire
@@ -104,8 +104,8 @@ MonoBehaviour:
   projectileSpeedPrimary: 30
   projectilePrefabNamePrimary: redFireball
   projectilePrefabPrimary: {fileID: 0}
-  attackTimerSecondary: 0.1
-  coolDownTimerSecondary: 0.2
+  attackTimerSecondary: 0.2
+  coolDownTimerSecondary: 0.4
   projectileSpeedSecondary: 30
   projectilePrefabNameSecondary: blueFireball
   projectilePrefabSecondary: {fileID: 0}
