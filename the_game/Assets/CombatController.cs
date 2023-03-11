@@ -22,8 +22,10 @@ public class CombatController : MonoBehaviour
         weaponConfigs = LoadAllWeaponConfigs();
         currentWeaponConfig = new WeaponConfig();
 
-        //Testing
-        currentWeaponConfig.weaponName = null;
+        //Set default weapon
+        currentWeaponConfig = weaponConfigs.Find(item => item.name == "Wand Of Fire").GetComponent<WeaponConfig>();
+        currentWeaponConfig.projectilePrefabPrimary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNamePrimary);
+        currentWeaponConfig.projectilePrefabSecondary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNameSecondary);
     }
 
     // Update is called once per frame
@@ -35,6 +37,10 @@ public class CombatController : MonoBehaviour
 
         if(pickupNewWeapon && Input.GetKeyDown(KeyCode.F))
         {
+
+            var currentWeapon = weaponConfigs.Find(item => item.name == currentWeaponConfig.weaponName);
+            Instantiate(currentWeapon, transform.position, Quaternion.identity);
+
             currentWeaponConfig = toBeDeleted.GetComponent<WeaponConfig>();
             currentWeaponConfig.projectilePrefabPrimary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNamePrimary);
             currentWeaponConfig.projectilePrefabSecondary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNameSecondary);
