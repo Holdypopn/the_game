@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         switch(state)
         {
             case State.Normal:
+                
                 GetComponent<Collider2D>().enabled = true;
 
                 float moveX = Input.GetAxisRaw("Horizontal");
@@ -47,6 +48,9 @@ public class PlayerController : MonoBehaviour
                     Flip();
                 else if(moveX < 0 && facingRight)
                     Flip();
+
+                if(moveX != 0 || moveY != 0)
+                    anim.SetTrigger("onRunning");
 
 
                 if(Input.GetMouseButtonDown(0))
