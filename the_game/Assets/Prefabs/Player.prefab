@@ -4985,8 +4985,8 @@ GameObject:
   - component: {fileID: 7755459287331766705}
   - component: {fileID: 7755459287331766719}
   - component: {fileID: 7755459287331766716}
+  - component: {fileID: 958227908815998682}
   - component: {fileID: 1486296052}
-  - component: {fileID: 1486296039}
   - component: {fileID: 1486296046}
   - component: {fileID: 4006639519564754944}
   - component: {fileID: 2304718158981906959}
@@ -5101,8 +5101,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   rb: {fileID: 7755459287331766719}
-  abilities: {fileID: 1486296039}
+  abilities: {fileID: 0}
   dust: {fileID: 1335826969}
+--- !u!114 &958227908815998682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755459287331766717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53dbb20bcf29384085853a32e98c45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceCirclePrefab: {fileID: 305901874130854743, guid: 4f892ef1c7233914a88842ab56c109d7, type: 3}
+  fireCircleShotPrefab: {fileID: 305901874130854743, guid: 142873d6571e040498522a52314abb95, type: 3}
+  growFactor: 20
+  maxSize: 20
+  numberOfObjects: 10
+  radius: 1
+  projectileSpeed: 10
 --- !u!95 &1486296052
 Animator:
   serializedVersion: 5
@@ -5123,22 +5142,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1486296039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7755459287331766717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a323a41bd942d184399e5309f544d5ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circlePrefab: {fileID: 3412370355935943124, guid: f11670676696ace4dbde65c9b7c38490, type: 3}
-  growFactor: 20
-  maxSize: 20
-  waitTime: 5
 --- !u!114 &1486296046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5167,7 +5170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8d19acd61c14f4882401e6f23e12d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 7755459287224132416}
 --- !u!68 &2304718158981906959
 EdgeCollider2D:
   m_ObjectHideFlags: 0

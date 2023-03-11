@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public Rigidbody2D rb;
-    public Abilities abilities;
     public ParticleSystem dust;
     private WeaponController wC;
 
@@ -62,11 +61,6 @@ public class PlayerController : MonoBehaviour
                 if(Input.GetMouseButtonDown(1))
                 {
                     wC.attackSecondary();
-                }
-
-                if(Input.GetKeyDown(KeyCode.Space))
-                {
-                    StartCoroutine(abilities.ActivateCircle());
                 }
 
                 
