@@ -46,4 +46,6 @@ public class EnemyHealth : MonoBehaviour
             prefab.GetComponentInChildren<TextMesh>().text = text;
         }
     }
+
+    
 }
