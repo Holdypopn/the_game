@@ -5,32 +5,25 @@ using UnityEngine;
 public class CombatController : MonoBehaviour
 {
     private List<GameObject> weaponPrefabs = new List<GameObject>();
+    private List<GameObject> weaponConfigs = new List<GameObject>();
 
     public Transform firePoint;
     
     private Quaternion rotation;
     private WeaponConfig currentWeaponConfig;
-    public bool pickupNewWeapon = false;
+    private bool pickupNewWeapon = false;
+    private GameObject toBeDeleted;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        weaponPrefabs = LoadAllWeaponPrefabs();
-        currentWeaponConfig = new WeaponConfig();
+        weaponPrefabs = LoadAllProjectilePrefabs();
+        weaponConfigs = LoadAllWeaponConfigs();
 
-        //Testing
-        currentWeaponConfig.weaponName = "Wand of Fire";
-        currentWeaponConfig.attackTimerPrimary = 0.1f;
-        currentWeaponConfig.coolDownTimerPrimary = 0.5f;
-        currentWeaponConfig.projectileSpeedPrimary = 30f;
-        currentWeaponConfig.projectilePrefabNamePrimary = "redFireball";
+        //Set default weapon
+        currentWeaponConfig = weaponConfigs.Find(item => item.name == "Wand Of Fire").GetComponent<WeaponConfig>();
         currentWeaponConfig.projectilePrefabPrimary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNamePrimary);
-
-        currentWeaponConfig.attackTimerSecondary = 0.1f;
-        currentWeaponConfig.coolDownTimerSecondary = 0.2f;
-        currentWeaponConfig.projectileSpeedSecondary = 30f;
-        currentWeaponConfig.projectilePrefabNameSecondary = "blueFireball";
         currentWeaponConfig.projectilePrefabSecondary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNameSecondary);
     }
 
@@ -41,28 +34,41 @@ public class CombatController : MonoBehaviour
         currentWeaponConfig.attackTimerSecondary += Time.deltaTime;
         rotation = firePoint.rotation * Quaternion.Euler(0, 0, 90);
 
-        if(pickupNewWeapon)
+        if(pickupNewWeapon && Input.GetKeyDown(KeyCode.F))
         {
+
+            var currentWeapon = weaponConfigs.Find(item => item.name == currentWeaponConfig.weaponName);
+            Instantiate(currentWeapon, transform.position, Quaternion.identity);
+
+            currentWeaponConfig = toBeDeleted.GetComponent<WeaponConfig>();
             currentWeaponConfig.projectilePrefabPrimary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNamePrimary);
             currentWeaponConfig.projectilePrefabSecondary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNameSecondary);
             pickupNewWeapon = false;
-        }
-        
+            Destroy(toBeDeleted);
+        }        
     }
 
-    void OnTriggerStay2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Weapon") && Input.GetKeyDown(KeyCode.F))
+        if(col.gameObject.CompareTag("Weapon"))
         {
-            currentWeaponConfig = col.GetComponent<WeaponConfig>();
             pickupNewWeapon = true;
-            Destroy(col.gameObject);
+            toBeDeleted = col.gameObject;
         }
     }
 
-    public List<GameObject> LoadAllWeaponPrefabs()
+    void OnTriggerExit2D(Collider2D col)
     {
-        Object[] tempWeaponPrefabArray = Resources.LoadAll("Prefabs", typeof(GameObject));
+        if(col.gameObject.CompareTag("Weapon"))
+        {
+            pickupNewWeapon = false;
+            toBeDeleted = null;
+        }
+    }
+
+    public List<GameObject> LoadAllProjectilePrefabs()
+    {
+        Object[] tempWeaponPrefabArray = Resources.LoadAll("Projectiles", typeof(GameObject));
 
         foreach(GameObject weaponPrefab in tempWeaponPrefabArray)
         {
@@ -70,6 +76,18 @@ public class CombatController : MonoBehaviour
         }
 
         return weaponPrefabs;
+    }
+
+    public List<GameObject> LoadAllWeaponConfigs()
+    {
+        Object[] tempWeaponConfigArray = Resources.LoadAll("WeaponConfigs", typeof(GameObject));
+
+        foreach(GameObject weaponConfig in tempWeaponConfigArray)
+        {
+            weaponConfigs.Add(weaponConfig);
+        }
+
+        return weaponConfigs;
     }
 
     public void attackPrimary()
