@@ -34,7 +34,7 @@ public class WeaponController : MonoBehaviour
         currentWeaponConfig.attackTimerSecondary += Time.deltaTime;
         rotation = firePoint.rotation * Quaternion.Euler(0, 0, 90);
 
-        if(pickupNewWeapon && Input.GetKeyDown(KeyCode.F))
+        if(pickupNewWeapon && Input.GetKeyDown(KeyCode.Space))
         {
 
             var currentWeapon = weaponConfigs.Find(item => item.name == currentWeaponConfig.weaponName);
