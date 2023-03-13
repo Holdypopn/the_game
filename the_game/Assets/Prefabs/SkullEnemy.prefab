@@ -140,6 +140,8 @@ MonoBehaviour:
   attackCoolDown: 2
   moveSpeed: 5
   maxDistance: 15
+  projectile: {fileID: 4425985870129367323, guid: ba3158643b6caea4d984827f1bfe6a55, type: 3}
+  startTimeBetweenShots: 2
 --- !u!114 &8000265641090334764
 MonoBehaviour:
   m_ObjectHideFlags: 0

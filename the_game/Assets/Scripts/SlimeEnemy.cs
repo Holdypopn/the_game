@@ -32,20 +32,25 @@ public class SlimeEnemy : Enemy
         {
             anim.SetTrigger("attack");
 
-            Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
-            if(player.currentShield <= 0)
-                player.currentHealth -= damage;
-            else
-            {
-                player.currentShield -= damage;
-                if(player.currentShield <= 0)
-                {
-                    player.currentHealth -= player.currentShield;
-                    player.currentShield = 0;
-                }
-            }
-
+            PlayerDamageHandling();
+            
             StartCoroutine(AttackCoolDown());
+        }
+    }
+
+    void PlayerDamageHandling()
+    {
+        Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        if(player.currentShield <= 0)
+            player.currentHealth -= damage;
+        else
+        {
+            player.currentShield -= damage;
+            if(player.currentShield <= 0)
+            {
+                player.currentHealth -= player.currentShield;
+                player.currentShield = 0;
+            }
         }
     }
 
