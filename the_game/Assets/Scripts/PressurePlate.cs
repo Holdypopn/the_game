@@ -18,7 +18,15 @@ public class PressurePlate : MonoBehaviour
         if(col.gameObject.CompareTag("Player"))
         {
             spriteRenderer.color = Color.red;
-            gameManager.SpawnNewEnemy(enemy);
+            gameManager.SpawnNewEnemy(enemy);            
+            GetComponent<Collider2D>().enabled = false;
+            StartCoroutine(PressurePlateReset());
+        }
+
+        if(col.gameObject.CompareTag("Projectile"))
+        {
+            spriteRenderer.color = Color.red;
+            gameManager.SpawnEnemyGroup();            
             GetComponent<Collider2D>().enabled = false;
             StartCoroutine(PressurePlateReset());
         }

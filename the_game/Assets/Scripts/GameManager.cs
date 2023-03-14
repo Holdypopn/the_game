@@ -6,7 +6,8 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject enemyToSpawn;
+    public GameObject slime;
+    public GameObject skull;
 
     private void OnEnable()
     {
@@ -21,6 +22,21 @@ public class GameManager : MonoBehaviour
     public void SpawnNewEnemy(Enemy enemy)
     {
         Vector2 randomPositionOnScreen = Camera.main.ViewportToWorldPoint(new Vector2(Random.value, Random.value));
-        Instantiate(enemyToSpawn, randomPositionOnScreen, Quaternion.identity);
+        Instantiate(enemy, randomPositionOnScreen, Quaternion.identity);
+    }
+
+    public void SpawnEnemyGroup()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Vector2 randomPositionOnScreen = Camera.main.ViewportToWorldPoint(new Vector2(Random.value, Random.value));
+            Instantiate(slime, randomPositionOnScreen, Quaternion.identity);
+        }
+        
+        for (int i = 0; i < 5; i++)
+        {
+            Vector2 randomPositionOnScreen = Camera.main.ViewportToWorldPoint(new Vector2(Random.value, Random.value));
+            Instantiate(skull, randomPositionOnScreen, Quaternion.identity);
+        }
     }
 }
