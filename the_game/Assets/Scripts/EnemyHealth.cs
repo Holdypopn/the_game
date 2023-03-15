@@ -30,11 +30,14 @@ public class EnemyHealth : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject, 0.3f);
-            //anim.SetTrigger("onDeath");
-            enemy.moveSpeed = 0;
-            if(UnityEngine.Random.Range(0f, 1f) <= dropChance)
-                Instantiate(drop, transform.position, Quaternion.identity);
+            if(gameObject.tag != "Structure")
+            {
+                Destroy(gameObject, 0.3f);
+                //anim.SetTrigger("onDeath");
+                enemy.moveSpeed = 0;
+                if(UnityEngine.Random.Range(0f, 1f) <= dropChance)
+                    Instantiate(drop, transform.position, Quaternion.identity);
+            }
         }
     }
 
