@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkullBoss : MonoBehaviour
+public class SkullBoss : Enemy
 {
-    private float timeBetweenShots;
-
     public float startTimeBetweenShots;
     public GameObject projectile;
-
     public GameObject BossShieldGenerator1;
     public GameObject BossShieldGenerator2;
     public GameObject BossShieldGenerator3;
     public GameObject BossShieldGenerator4;
     public GameObject shield;
+    public float meleeAttackCoolDown = 2;
 
+    private float timeBetweenShots;
     private List<GameObject> generatorList;
     private bool phaseDone = false;
+    private float touchDamage = 10f;
+    private bool playerInRange = false;
+    private bool canAttack = true;
+    private Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,8 @@ public class SkullBoss : MonoBehaviour
         generatorList.Add(BossShieldGenerator2);
         generatorList.Add(BossShieldGenerator3);
         generatorList.Add(BossShieldGenerator4);
+
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -54,7 +59,24 @@ public class SkullBoss : MonoBehaviour
             shield.SetActive(false);
             GetComponent<Collider2D>().enabled = true;
         }
-        
+
+        if(playerInRange && canAttack)
+        {
+            player.TakeDamage(touchDamage);
+            StartCoroutine(AttackCoolDown());
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Player"))
+            playerInRange = true;
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Player"))
+            playerInRange = false;
     }
 
     public bool CheckIfGeneratorsAlive()
@@ -71,5 +93,12 @@ public class SkullBoss : MonoBehaviour
             }
         }
         return allGeneratorsDead;
+    }
+
+    IEnumerator AttackCoolDown()
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(meleeAttackCoolDown);
+        canAttack = true;
     }
 }

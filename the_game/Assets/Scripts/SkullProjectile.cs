@@ -30,23 +30,8 @@ public class SkullProjectile : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             Destroy(gameObject);
-            PlayerDamageHandling();
-        }
-    }
-
-    void PlayerDamageHandling()
-    {
-        Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
-        if(player.currentShield <= 0)
-            player.currentHealth -= damage;
-        else
-        {
-            player.currentShield -= damage;
-            if(player.currentShield <= 0)
-            {
-                player.currentHealth -= player.currentShield;
-                player.currentShield = 0;
-            }
+            Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
+            player.TakeDamage(damage);
         }
     }
 }

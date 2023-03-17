@@ -6,7 +6,6 @@ public class SkullEnemy : Enemy
 {
     private GameObject player;
     private Animator anim;
-    private bool playerInRange = false;
     private float timeBetweenShoots;
 
 
@@ -53,21 +52,13 @@ public class SkullEnemy : Enemy
     {
         if(col.gameObject.CompareTag("Player"))
         {
+            // using this to destroy the Skull because of ramming into the player
+            // probably not a good idea -> floatingText + wrong usage
             float damage = GetComponent<EnemyHealth>().health;
             GetComponent<EnemyHealth>().TakeDamage(damage);
-            Player player = col.gameObject.GetComponent<Player>();
-            if(player.currentShield <= 0)
-                player.currentHealth -= damage;
-            else
-            {
-                player.currentShield -= damage;
-                if(player.currentShield <= 0)
-                {
-                    player.currentHealth -= player.currentShield;
-                    player.currentShield = 0;
-                }
-            }
 
+            Player player = col.gameObject.GetComponent<Player>();
+            player.TakeDamage(damage);
         }
     }
 }

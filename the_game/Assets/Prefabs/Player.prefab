@@ -5101,7 +5101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   rb: {fileID: 7755459287331766719}
-  abilities: {fileID: 0}
   dust: {fileID: 1335826969}
 --- !u!114 &958227908815998682
 MonoBehaviour:
@@ -5115,7 +5114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53dbb20bcf29384085853a32e98c45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iceCirclePrefab: {fileID: 305901874130854743, guid: 4f892ef1c7233914a88842ab56c109d7, type: 3}
+  iceCirclePrefab: {fileID: 3412370355935943124, guid: f11670676696ace4dbde65c9b7c38490, type: 3}
   fireCircleShotPrefab: {fileID: 305901874130854743, guid: 142873d6571e040498522a52314abb95, type: 3}
   growFactor: 20
   maxSize: 20
@@ -5158,6 +5157,7 @@ MonoBehaviour:
   maxHealth: 50
   currentShield: 10
   maxShield: 10
+  floatingTextPrefab: {fileID: 6771633852310011018, guid: 276923470c94ecd47a02491043b428f2, type: 3}
 --- !u!114 &4006639519564754944
 MonoBehaviour:
   m_ObjectHideFlags: 0
