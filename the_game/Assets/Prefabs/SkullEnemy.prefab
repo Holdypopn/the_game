@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8411121979773970451}
   - component: {fileID: 236029379411084355}
   - component: {fileID: 8000265641090334764}
+  - component: {fileID: 1955061669335962018}
   m_Layer: 0
   m_Name: SkullEnemy
   m_TagString: Untagged
@@ -160,3 +161,23 @@ MonoBehaviour:
   enemy: {fileID: 236029379411084355}
   drop: {fileID: 1677237715163056074, guid: 0f07b20f8a40db74f843f872144025d9, type: 3}
   floatingTextPrefab: {fileID: 6771633852310011018, guid: f8387407147e9ad47b50249dfe8f6184, type: 3}
+--- !u!95 &1955061669335962018
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034531264342433461}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
