@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:the_game/Assets/art/paletts/dungeon tiles/dungeon tileset_48.asset.meta
 guid: 1db83780ceb3765419ca60778f84ed59
+========
+guid: 673ec3dcd1ec9e64294a8c48ca493672
+>>>>>>>> Stashed changes:the_game/Assets/art/paletts/dungeon tiles/dungeon tileset_51.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
