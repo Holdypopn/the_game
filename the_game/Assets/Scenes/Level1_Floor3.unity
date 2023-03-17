@@ -370,7 +370,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766705, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 635293364, guid: 9109421915362a042aada850e08f9ccc, type: 3}
+    - target: {fileID: 7755459287331766705, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7755459287331766717, guid: acfeb334c982e654491e1cb73b199fcd, type: 3}
