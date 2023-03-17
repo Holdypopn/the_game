@@ -25,7 +25,7 @@ public class MenuManager : MonoBehaviour, IPointerEnterHandler
     }
     public void StartGame() 
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SaveRoom");
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
