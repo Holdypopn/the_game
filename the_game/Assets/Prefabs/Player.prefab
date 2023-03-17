@@ -5006,7 +5006,7 @@ Transform:
   m_GameObject: {fileID: 7755459287331766717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02414009, y: 0.18779606, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6126794526528809647}
@@ -5099,7 +5099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd8ec0f5ddc13c43a2313f16071a6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 4
   rb: {fileID: 7755459287331766719}
   dust: {fileID: 1335826969}
 --- !u!114 &958227908815998682
@@ -5187,20 +5187,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.29583302, y: -0.4947122}
-  - {x: 0.06438579, y: -0.5025648}
-  - {x: 0.3665062, y: -0.49078593}
-  - {x: 0.22908622, y: -0.36121845}
-  - {x: 0.24479133, y: -0.18453549}
-  - {x: 0.2801279, y: -0.07459946}
-  - {x: 0.20945472, y: 0.07067318}
-  - {x: 0.2879804, y: 0.21201952}
-  - {x: 0.14270782, y: 0.45937565}
-  - {x: 0.0013614595, y: 0.46330196}
-  - {x: -0.23421577, y: 0.2473561}
-  - {x: -0.22243686, y: -0.000000022351742}
-  - {x: -0.16716029, y: -0.30403644}
-  - {x: -0.29311013, y: -0.4750808}
+  - {x: -0.25955907, y: -0.48665142}
+  - {x: -0.00010038912, y: -0.49047363}
+  - {x: 0.26574668, y: -0.4948163}
+  - {x: 0.225056, y: -0.2161249}
+  - {x: -0.19452028, y: -0.21677841}
+  - {x: -0.25994292, y: -0.49375874}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
