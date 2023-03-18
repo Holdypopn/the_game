@@ -37,11 +37,20 @@ public class GameManager : MonoBehaviour
     }
 
     // Data to persist
-    public float health;
-    public float shield;
-    public float essence;
-
-  
+    public float currentHealth = 50f;
+    public float maxHealth = 50f;
+    public float currentShield = 10f;
+    public float maxShield = 10f;
+    public float essence = 0f;
+    
+    void Awake()
+    {
+        currentHealth = 50f;
+        maxHealth = 50f;
+        currentShield = 10f;
+        maxShield = 10f;
+        essence = 0f;
+    }
 
     private void OnEnable()
     {
