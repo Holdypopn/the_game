@@ -22,7 +22,7 @@ public class WeaponController : MonoBehaviour
         weaponConfigs = LoadAllWeaponConfigs();
 
         //Set default weapon
-        currentWeaponConfig = weaponConfigs.Find(item => item.name == "Wand Of Fire").GetComponent<WeaponConfig>();
+        currentWeaponConfig = weaponConfigs.Find(item => item.name == "Book of Magic").GetComponent<WeaponConfig>();
         currentWeaponConfig.projectilePrefabPrimary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNamePrimary);
         currentWeaponConfig.projectilePrefabSecondary = weaponPrefabs.Find(item => item.name == currentWeaponConfig.projectilePrefabNameSecondary);
     }
