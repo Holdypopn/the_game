@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
         state = State.Normal;
         anim = GetComponent<Animator>();
         wC = GetComponent<WeaponController>();
+
+        Debug.Log(GameManager.GM.health);
     }
 
     // Update is called once per frame
