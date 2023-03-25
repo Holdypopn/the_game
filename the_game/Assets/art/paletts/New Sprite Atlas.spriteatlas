@@ -45,6 +45,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: ba218aeba30384d40b843fc78dfbcc76, type: 3}
+    - {fileID: 2800000, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -133,6 +134,15 @@ SpriteAtlas:
   - {fileID: -1694270576, guid: ba218aeba30384d40b843fc78dfbcc76, type: 3}
   - {fileID: -1703603751, guid: ba218aeba30384d40b843fc78dfbcc76, type: 3}
   - {fileID: -1022559558, guid: ba218aeba30384d40b843fc78dfbcc76, type: 3}
+  - {fileID: -1296493132, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: -619463015, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: -1699691135, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: -422469426, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: 618434395, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: -1638585374, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: 1588366834, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: -1307371584, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
+  - {fileID: -1674084790, guid: fa84afaca7a82cc4f80a1443f414cd5a, type: 3}
   m_PackedSpriteNamesToIndex:
   - dungeon tileset_69
   - dungeon tileset_79
@@ -217,6 +227,15 @@ SpriteAtlas:
   - dungeon tileset_71
   - dungeon tileset_70
   - dungeon tileset_68
+  - dungeon tileset2_2
+  - dungeon tileset2_3
+  - dungeon tileset2_0
+  - dungeon tileset2_1
+  - dungeon tileset2_6
+  - dungeon tileset2_7
+  - dungeon tileset2_4
+  - dungeon tileset2_5
+  - dungeon tileset2_8
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
