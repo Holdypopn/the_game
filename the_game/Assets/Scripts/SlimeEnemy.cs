@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SlimeEnemy : Enemy
 {
@@ -13,10 +14,15 @@ public class SlimeEnemy : Enemy
     private bool playerInRange = false;
     private bool canAttack = true;
     
+    NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+		agent.updateRotation = false;
+		agent.updateUpAxis = false;
+
         target = GameObject.FindWithTag("Player");
         anim = GetComponent<Animator>();
     }
@@ -24,9 +30,11 @@ public class SlimeEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+        /*GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
         if(!playerInRange)
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, this.moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, this.moveSpeed * Time.deltaTime);*/
+
+        agent.SetDestination(target.transform.position);
 
         if(playerInRange && canAttack)
         {
