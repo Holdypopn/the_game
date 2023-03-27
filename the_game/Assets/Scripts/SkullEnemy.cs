@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SkullEnemy : Enemy
 {
     private GameObject player;
     private Animator anim;
     private float timeBetweenShoots;
-
+    private NavMeshAgent agent;
 
     public float maxDistance = 15f;
     public GameObject projectile;
@@ -16,6 +17,10 @@ public class SkullEnemy : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+		agent.updateRotation = false;
+		agent.updateUpAxis = false;
+
         player = GameObject.FindWithTag("Player");
         //anim = GetComponent<Animator>();
 
@@ -26,10 +31,21 @@ public class SkullEnemy : Enemy
     void Update()
     {
         if(GetRangeToPlayer(player) > maxDistance)
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, this.moveSpeed * Time.deltaTime);
+        {
+            agent.isStopped = false;
+            agent.SetDestination(player.transform.position);
+            //transform.position = Vector2.MoveTowards(transform.position, player.transform.position, this.moveSpeed * Time.deltaTime);
+        }
 
         if(GetRangeToPlayer(player) <= maxDistance / 3)
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, this.moveSpeed * Time.deltaTime);
+        {
+            agent.isStopped = false;
+            agent.SetDestination(player.transform.position);
+            //transform.position = Vector2.MoveTowards(transform.position, player.transform.position, this.moveSpeed * Time.deltaTime);
+        }
+
+        if(GetRangeToPlayer(player) < maxDistance && GetRangeToPlayer(player) > maxDistance / 3)
+            agent.isStopped = true;
 
 
         if(timeBetweenShoots <= 0)
