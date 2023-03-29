@@ -27,6 +27,11 @@ public class SkullProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.gameObject.layer == LayerMask.NameToLayer("Action"))
+        {
+            Destroy(gameObject);
+        }
+
         if(col.CompareTag("Player"))
         {
             Destroy(gameObject);

@@ -28,6 +28,13 @@ public class basicProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.gameObject.layer == LayerMask.NameToLayer("Action"))
+        {
+            anim.SetTrigger("onDeath");
+            rb.velocity = Vector3.zero;
+            Destroy(gameObject, 0.5f);
+        }
+
         if(col.gameObject.TryGetComponent<EnemyHealth>(out EnemyHealth enemyComponent))
         {
             enemyComponent.TakeDamage(damage);
