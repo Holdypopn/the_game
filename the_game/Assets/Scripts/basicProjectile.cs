@@ -28,7 +28,7 @@ public class basicProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.layer == LayerMask.NameToLayer("Action"))
+        if(col.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             anim.SetTrigger("onDeath");
             rb.velocity = Vector3.zero;

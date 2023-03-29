@@ -14,7 +14,7 @@ TagManager:
   - PlayerLayer
   - Water
   - UI
-  - Action
+  - Wall
   - EnemyLayer
   - Post Processing
   - 
