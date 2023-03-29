@@ -8,13 +8,14 @@ public class SlimeEnemy : Enemy
 {
     public float damage = 1;
     public float enemyCoolDown = 2;
+    public Transform viewPoint;
+    public float viewDistance = 15f;
 
-    private GameObject target;
+    private GameObject player;
     private Animator anim;
     private bool playerInRange = false;
     private bool canAttack = true;
-    
-    NavMeshAgent agent;
+    private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class SlimeEnemy : Enemy
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;
 
-        target = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player");
         anim = GetComponent<Animator>();
     }
 
@@ -33,8 +34,14 @@ public class SlimeEnemy : Enemy
         /*GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
         if(!playerInRange)
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, this.moveSpeed * Time.deltaTime);*/
+        if(GetRangeToPlayer(player) <= viewDistance && CanSeePlayer(viewPoint, player))
+        {
+            agent.isStopped = false;
+            agent.SetDestination(player.transform.position);
+        }
 
-        agent.SetDestination(target.transform.position);
+        if(GetRangeToPlayer(player) >= viewDistance)
+            agent.isStopped = true;
 
         if(playerInRange && canAttack)
         {
