@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     {
         bool canSeePlayer = false;
 
-        RaycastHit2D hit = Physics2D.Linecast(viewPoint.position, player.transform.position, 1 << LayerMask.NameToLayer("Action"));
+        RaycastHit2D hit = Physics2D.Linecast(viewPoint.position, player.transform.position, 1 << LayerMask.NameToLayer("PlayerLayer"));
 
         if(hit.collider != null)
         {

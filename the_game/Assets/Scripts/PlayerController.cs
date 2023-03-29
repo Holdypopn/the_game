@@ -36,8 +36,7 @@ public class PlayerController : MonoBehaviour
         switch(state)
         {
             case State.Normal:
-
-                GetComponent<Collider2D>().enabled = true;
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Default"), LayerMask.NameToLayer("EnemyLayer"), false);
 
                 float moveX = Input.GetAxisRaw("Horizontal");
                 float moveY = Input.GetAxisRaw("Vertical");
@@ -75,7 +74,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case State.Dashing:
-                GetComponent<Collider2D>().enabled = false;
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("PlayerLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
                 float dashSpeedDropMultiplier = 4f;
                 dashSpeed -= dashSpeed * dashSpeedDropMultiplier * Time.deltaTime;
 

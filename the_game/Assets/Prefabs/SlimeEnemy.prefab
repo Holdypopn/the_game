@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1257941655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: viewPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6686988282337365633}
   - component: {fileID: 8961897250327683810}
   - component: {fileID: 1942161518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlimeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
