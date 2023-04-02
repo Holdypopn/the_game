@@ -51,11 +51,21 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 4fdc02ca193dc4f4fa224187ab90f9ff, type: 3}
     - {fileID: 2800000, guid: cdcb811e090dec249ade0f20501f78e7, type: 3}
     - {fileID: 2800000, guid: 462e457b0a0476e4c9451a7ebf514a1a, type: 3}
+    - {fileID: 2800000, guid: e79a7902b8991ea4c8b1691ee1bfab6e, type: 3}
+    - {fileID: 2800000, guid: 04689981970f8c34abc1505eaa6410cf, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: -1880115112, guid: 04689981970f8c34abc1505eaa6410cf, type: 3}
+  - {fileID: 1775412021, guid: 04689981970f8c34abc1505eaa6410cf, type: 3}
+  - {fileID: 1632166487, guid: 04689981970f8c34abc1505eaa6410cf, type: 3}
+  - {fileID: 724277535, guid: 04689981970f8c34abc1505eaa6410cf, type: 3}
+  - {fileID: 1860668950, guid: e79a7902b8991ea4c8b1691ee1bfab6e, type: 3}
+  - {fileID: -383068762, guid: e79a7902b8991ea4c8b1691ee1bfab6e, type: 3}
+  - {fileID: 1444368564, guid: e79a7902b8991ea4c8b1691ee1bfab6e, type: 3}
+  - {fileID: -178138251, guid: e79a7902b8991ea4c8b1691ee1bfab6e, type: 3}
   - {fileID: -106645410, guid: 0d3895521a2378c44b46085fc343bf36, type: 3}
   - {fileID: -2096588168, guid: 0d3895521a2378c44b46085fc343bf36, type: 3}
   - {fileID: 777801339, guid: 0d3895521a2378c44b46085fc343bf36, type: 3}
@@ -265,6 +275,14 @@ SpriteAtlas:
   - {fileID: -481246630, guid: cdcb811e090dec249ade0f20501f78e7, type: 3}
   - {fileID: -1180536133, guid: cdcb811e090dec249ade0f20501f78e7, type: 3}
   m_PackedSpriteNamesToIndex:
+  - dungeon tileset9_1
+  - dungeon tileset9_0
+  - dungeon tileset9_3
+  - dungeon tileset9_2
+  - dungeon tileset8_0
+  - dungeon tileset8_1
+  - dungeon tileset8_2
+  - dungeon tileset8_3
   - dungeon tileset4_13
   - dungeon tileset4_12
   - dungeon tileset4_11
